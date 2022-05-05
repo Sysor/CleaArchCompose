@@ -1,0 +1,26 @@
+buildscript {
+    ext {
+        composeVersion = '1.1.1'
+        coroutinesVersion = "1.5.0"
+        roomVersion = "2.4.0"
+        glideVersion = "4.8.0"
+        navVersion = "2.3.5"
+        daggerVersion = "2.38.1"
+        kotlinVersion = "1.6.10"
+        kotlinSerializationVersion = "1.6.10"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlinSerializationVersion"
+    }
+}
+
+task ("clean") {
+    delete(rootProject.buildDir)
+}
